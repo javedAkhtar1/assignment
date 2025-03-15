@@ -84,7 +84,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-
+               
       {/* Menu for smaller screens */}
       {toggleMenu && (
         <>

@@ -2,12 +2,14 @@ import React from "react";
 import Navbar from "./Navbar";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useInView } from "react-intersection-observer";
+import Hero from "./Hero";
+import Footer from "./Footer";
 
 function Home() {
   const { ref: imgRef1, inView: groupImageVisible } = useInView({
     triggerOnce: true,
   });
-  const { ref: imgRef2, inView: childImageVisible } = useInView({
+  const { ref: imgRef2, inView: childImageVisible } = useInView({ 
     triggerOnce: true,
   });
   const { ref: imgRef3, inView: peopleImageVisible } = useInView({
@@ -65,6 +67,8 @@ function Home() {
           />
         </div>
       </div>
+      <Hero />
+      <Footer />
     </>
   );
 }
