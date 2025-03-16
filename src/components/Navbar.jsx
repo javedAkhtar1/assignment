@@ -96,12 +96,12 @@ function Navbar() {
       {toggleMenu && (
         <>
           <div className="flex flex-col items-center justify-center gap-1 py-1 font-Rubik text-sm w-full h-[150px] mt-10 lg:hidden">
-            <a
+            <Link
               className="hover:text-blue-700 hover:bg-blue-100 w-full text-center"
-              href="#"
+              to={"/"}
             >
               Home
-            </a>
+            </Link>
             <div
               className="relative cursor-pointer hover:text-blue-700 hover:bg-blue-100 w-full text-center"
               onClick={handleShowCommunities}
