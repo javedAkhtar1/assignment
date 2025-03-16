@@ -23,7 +23,7 @@ function CreateEvent() {
     if (!time) return "";
     let [hours, minutes] = time.split(":").map(Number);
     let period = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12 || 12; // Convert 0 or 12+ hour to 12-hour format
+    hours = hours % 12 || 12;
     return `${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
   }
   
@@ -46,7 +46,7 @@ function CreateEvent() {
 
     const defaultImage = "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ="
 
-    const eventWithImage = {
+    const formattedEvent = {
         ...newEvent,
         date: formatDate(newEvent.date),
         timeFrom: formatTime(newEvent.timeFrom),
@@ -54,7 +54,7 @@ function CreateEvent() {
         image: defaultImage
     }
 
-    setEventsList([...eventsList, eventWithImage]);
+    setEventsList([...eventsList, formattedEvent]);
     setNewEvent({
       name: "",
       date: "",
@@ -65,6 +65,7 @@ function CreateEvent() {
       category: "Charity",
       image: "",
     });
+
     // console.log(eventsList)
     alert("Event added!")
     navigate("/upcoming-events")
