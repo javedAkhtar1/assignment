@@ -4,6 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useInView } from "react-intersection-observer";
 import Hero from "./Hero";
 import Footer from "./Footer";
+import { Link } from "react-router";
 
 function Home() {
   const { ref: imgRef1, inView: groupImageVisible } = useInView({
@@ -36,9 +37,9 @@ function Home() {
             innovation. Together, we'll build a world that's more inclusive,
             engaging, and connected than ever before!
           </p>
-          <button className="px-5 py-1 bg-black hover:bg-gray-800 text-white">
+          <Link to={'/upcoming-events'} className="px-5 py-1 bg-black hover:bg-gray-800 text-white">
             Explore Events <ArrowForwardIcon />
-          </button>
+          </Link>
         </div>
         <div className="grid grid-cols-2 grid-rows-2 flex-1 gap-6 p-3 h-[300px]">
         <img

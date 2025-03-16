@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="flex md:justify-evenly justify-between px-2 py-4 xl:items-center fixed top-0 left-1/2 -translate-x-1/2 w-full bg-white z-50">
+      <nav className="flex lg:justify-evenly justify-between px-2 py-4 xl:items-center fixed top-0 left-1/2 -translate-x-1/2 w-full bg-white z-50">
         <div className="flex items-center gap-2">
           <img className="h-7 w-7" src="./logo.png" alt="company-logo" />
           <h1 className="font-Prompt text-xl text-blue-800">Communion</h1>

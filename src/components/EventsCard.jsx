@@ -3,11 +3,12 @@ import { useInView } from "react-intersection-observer";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-function EventsCard({ image, cost, date, category, timings, name }) {
+function EventsCard({ image, cost, date, category, timings, name, location }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2, 
+    threshold: 0.2,
   });
 
   return (
@@ -17,7 +18,11 @@ function EventsCard({ image, cost, date, category, timings, name }) {
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <img src={image} alt="event-image" className="w-full h-48 object-cover" />
+      <img
+        src={image}
+        alt="event-image"
+        className="w-full h-48 sm:h-56 md:h-64 min-h-[180px] object-cover"
+      />
       <div className="p-4 flex flex-col gap-2">
         <p
           style={{ color: cost.toLowerCase() === "free" ? "green" : "red" }}
@@ -34,6 +39,9 @@ function EventsCard({ image, cost, date, category, timings, name }) {
         </p>
         <p className="text-gray-600 text-sm">
           <AccessTimeIcon className="relative top-[-2px]" /> {timings}
+        </p>
+        <p className="text-gray-600 text-sm">
+          <LocationOnIcon className="relative top-[-2px]" /> {location}
         </p>
         <button className="py-2 bg-[#222] hover:bg-gray-800 text-white rounded-lg">
           Event Details <ArrowOutwardIcon className="relative top-[-2px]" />

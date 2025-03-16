@@ -49,7 +49,7 @@ function Footer() {
               </ul>
             </div>
           </section>
-          <div className="text-white border-t border-gray-700 py-8 flex flex-col md:flex-row justify-between items-center h-auto">
+          <div className="text-white border-t border-gray-700 py-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 text-center md:text-left">
               Copyright &#169; 2024. All rights reserved to Communion
             </p>
