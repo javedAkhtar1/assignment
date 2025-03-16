@@ -125,12 +125,12 @@ function Navbar() {
               Events
               {showEvents && (
                 <div className="absolute w-[160px] left-1/2 -translate-x-1/2 shadow-md text-gray-400 font-thin font-Rubik z-[999] bg-white cursor-pointer">
-                  <p className="p-2 border-b border-gray-300 hover:text-blue-700 hover:bg-blue-100">
+                  <Link to={"/upcoming-events"} className="block p-2 border-b border-gray-300 hover:text-blue-700 hover:bg-blue-100">
                     Upcoming events
-                  </p>
-                  <p className="p-2 hover:text-blue-700 hover:bg-blue-100">
+                  </Link>
+                  <Link to={"/create-event"} className="block p-2 hover:text-blue-700 hover:bg-blue-100">
                     Create an event
-                  </p>
+                  </Link>
                 </div>
               )}
             </div>
