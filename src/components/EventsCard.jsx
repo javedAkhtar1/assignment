@@ -5,11 +5,16 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-function EventsCard({ image, cost, date, category, timings, name, location }) {
+function EventsCard({ image, cost, date, category, timeFrom, timeTo, name, location }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  function capitalize(str) {
+    if (!str) return ""
+    return str.charAt(0).toUpperCase() + str.slice(1)
+  }
 
   return (
     <div
@@ -31,17 +36,17 @@ function EventsCard({ image, cost, date, category, timings, name, location }) {
           {cost.toUpperCase()}
         </p>
         <p className="text-gray-600 font-Lato font-semibold underline">
-          {category}
+          {capitalize(category)}
         </p>
-        <h2 className="font-semibold font-Lato text-xl">{name}</h2>
+        <h2 className="font-semibold font-Lato text-xl">{capitalize(name)}</h2>
         <p className="text-gray-600 text-sm">
           <CalendarMonthIcon className="relative top-[-2px]" /> {date}
         </p>
         <p className="text-gray-600 text-sm">
-          <AccessTimeIcon className="relative top-[-2px]" /> {timings}
+          <AccessTimeIcon className="relative top-[-2px]" /> {timeFrom} IST - {timeTo} IST
         </p>
         <p className="text-gray-600 text-sm">
-          <LocationOnIcon className="relative top-[-2px]" /> {location}
+          <LocationOnIcon className="relative top-[-2px]" /> {capitalize(location)}
         </p>
         <button className="py-2 bg-[#222] hover:bg-gray-800 text-white rounded-lg">
           Event Details <ArrowOutwardIcon className="relative top-[-2px]" />

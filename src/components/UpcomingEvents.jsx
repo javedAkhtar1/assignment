@@ -26,7 +26,8 @@ function UpcomingEvents() {
             name={event.name}
             category={event.category}
             location={event.location}
-            timings={event.timings}
+            timeFrom={event.timeFrom}
+            timeTo={event.timeTo}
             date={event.date}
             image={event.image}
             cost={event.cost}
