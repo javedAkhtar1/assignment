@@ -10,7 +10,7 @@ function TermsAndConditions() {
         <h1 className="font-bold text-center text-3xl font-Lato mb-2">Terms & Conditions</h1>
         <h2 className="text-center text-sm font-Lato text-gray-600">Last Updated: 01/03/2025</h2>
 
-        <ol className="list-decimal mt-6 space-y-6">
+        <ol className="list-decimal p-3 mt-6 space-y-6">
           <li>
             <h3 className="font-semibold text-lg">Acceptance of Terms</h3>
             <p className="text-gray-700 mt-1">
